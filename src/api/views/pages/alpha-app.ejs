@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../segments/head'); %>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.1/socket.io.js"></script>
+    <script type="application/javascript">
+        var pageUrlIdToProcess = "<%- pageUrlIdToProcess %>"
+    </script>
+    <script src="/public/js/alpha-app.js" type="application/javascript"></script>
+    <script src="/public/js/socket.js"></script>
+    <link rel="stylesheet" href="/public/css/alpha-app.css">
+</head>
+<body class="container">
+
+    <%- include('../segments/header'); %>
+
+    <main>
+        <div class="timeline">
+            <div class="current-resolution"></div>
+            <div class="resolutions"></div>
+            <div class="errors"></div>
+        </div>
+        <div class="page-wrapper">
+            <div id="page-window">
+                <iframe id="responsiveye-iframe" src="" width="600px" height="700" referrerpolicy="no-referrer" allow></iframe>
+            </div>
+            <div class="resize-drag-wrapper"><div class="resize-drag"></div></div>
+        </div>
+    </main>
+
+    <%- include('../segments/footer'); %>
+
+</body>
+</html>

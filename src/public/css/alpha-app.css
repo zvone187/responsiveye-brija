@@ -1,0 +1,100 @@
+.timeline {
+    width: 100%;
+    height: 40px;
+    background: grey;
+    display: block;
+    align-items: end;
+    position: relative;
+}
+
+.resolution-marker, .error-marker {
+    height: 100%;
+    display: flex;
+    position: relative;
+    align-items: end;
+}
+
+.resolutions, .errors {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+}
+
+.resolution-marker .resolution {
+    position: absolute;
+    top: 5px;
+    left: -18px;
+    color: white;
+    font-size: small;
+}
+
+.resolution-marker .marker {
+    background: yellow;
+    width: 2px;
+    height: 10px;
+}
+
+.error-marker .marker {
+    width: 2px;
+    height: 10px;
+    position: absolute;
+}
+
+.breaking-elements.error-marker .marker, .breaking-elements.error-marker .exclmark {
+    background: red;
+}
+
+.overlap-processing.error-marker .marker, .overlap-processing.error-marker .exclmark {
+    background: yellowgreen;
+}
+
+.error-marker .exclmark {
+    width: 20px;
+    height: 20px;
+    background: red;
+    border-radius: 20px;
+    position: absolute;
+    top: 10px;
+    left: -10px;
+    border: 1px solid white;
+    text-align: center;
+    vertical-align: middle;
+    color: wheat;
+    line-height: 20px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.resize-drag {
+    height: 100%;
+    width: 100%;
+    background: grey;
+    position: absolute;
+}
+
+.resize-drag-wrapper {
+    display: inline-block;
+    height: 80%;
+    width: 20px;
+    position: relative;
+    top: 10%;
+    margin-left: 10px;
+}
+
+#page-window {
+    display: inline-block;
+}
+
+.page-wrapper {
+    height: 800px;
+    position: relative;
+}
+
+.current-resolution {
+    height: 100%;
+    position: absolute;
+    width: 3px;
+    background: #00000080;
+    border-radius: 5px;
+}
